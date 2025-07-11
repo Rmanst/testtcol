@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計量傳感器 - 專業測量解決方案</title>
+    <link rel="stylesheet" href="modified-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+    <!-- Main Content -->
+    <main>
+
+            <!-- Purchase -->
+                       <div class="page-header">
+                <div class="container">
+                    <h1>購買資訊</h1>
+                    <p>我們提供便捷的線上購物服務，讓您輕鬆選購優質產品</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="purchase-process">
+                    <h2>購買流程</h2>
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h3>選擇分類</h3>
+                            <p>瀏覽我們的產品分類並選擇您所需的商品類型</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h3>選擇商品</h3>
+                            <p>瀏覽所選分類中的產品並將喜愛的項目加入購物車</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h3>結帳付款</h3>
+                            <p>選擇您偏好的支付方式並完成交易</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <h3>出貨配送</h3>
+                            <p>我們會儘快安排您的訂單出貨，並提供追蹤號碼</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shopping-cart-section">
+                    
+                <div class="product-categories-selection">
+
+                    <h2>產品分類</h2>
+                    <div class="category-grid">
+                        <div class="category-card" onclick="selectCategory('meters')">
+                            <!--<div class="category-icon"><i class="fas fa-tachometer-alt"></i></div>-->
+                            <h3>📊計量產品</h3>
+                            <p>
+                              <ul>
+                                <li>電子秤</li>
+                                <li>三用電表</li>
+                                <li>電池內阻表</li>
+                                <li>電能表</li>
+                                <li>流體表</li>
+                                <li>流氣表</li>
+                                <li>耳溫槍</li>
+                                <li>血壓計</li>
+                                <li>血醣計</li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="category-card" onclick="selectCategory('sensors')">
+                            <!--<div class="category-icon"><i class="fas fa-thermometer-half"></i></div>-->
+                            <h3>🌡️數字傳感器 </h3>
+                            <p>
+                              <ul>
+                                 <li>接觸式溫度計</li>
+                                 <li>紅外線測溫頭</li>
+                               </ul>
+                            </p>
+                        </div>
+                        <div class="category-card" onclick="selectCategory('memory')">
+                            <!--<div class="category-icon"><i class="fas fa-microchip"></i></div>-->
+                            <h3>💾EEPROM</h3>
+                            <p>
+                              <ul>
+                                 <li>EEPROM</li>
+                              </ul>
+                           </p>
+                        </div>
+                        <div class="category-card" onclick="selectCategory('portable')">
+                            <!--<div class="category-icon"><i class="fas fa-battery-full"></i></div>-->
+                            <h3>📱數字鋰電池座</h3>
+                            <p>
+                              <ul>
+                                 <li>1.5V電池系列</li>
+                                 <li>鋰電池電源方案</li>
+                                 <li>電池包</li>
+                                 <li>鋰電池電源管理芯片</li>
+                             </ul>
+                        </p>
+                        </div>                     
+                        <div class="category-card" onclick="selectCategory('batteries')">
+                            <!--<div class="category-icon"><i class="fas fa-car-battery"></i></div>-->
+                            <h3>🔋動力電池芯監測</h3>
+                            <p>
+                              <ul>
+                                 <li>動力電池芯監測</li>
+                                 <!--<li>飛行器</li>
+                                 <li>儲能設備</li>-->
+                              </ul>
+                           </p>
+                        </div>
+                        <div class="category-card" onclick="selectCategory('other')">
+                            <!--<div class="category-icon"><i class="fas fa-ellipsis-h"></i></div>-->
+                            <h3>🔋其他 </h3>
+                            <p>
+                              <ul>
+                                 <li>Bluetooth Gateway</li>
+                                 <li>指環翻頁控制器</li>
+                                 <li>無線滑鼠</li>
+                              </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>產品</h2>
+                     <div class="product-grid">
+                        <!-- 產品1 -->
+                        <div class="product-card">
+                            <a href="meters-TOC-123.html">
+                            <div class="product-image">
+                                <img src="images/TOC-123.jpg" alt="廚房料理藍牙電子秤">
+                            </div>
+                            </a>
+                            <div class="product-info">
+                                <h3>TOC-123<br>廚房料理藍牙電子秤</h3>
+                                <p class="product-description">精準量測食材重量</p>
+                                <div class="product-price-stock">
+                                    <span class="price">NT$ 800</span>
+                                    <!--<span class="stock">庫存: 15</span>-->
+                                </div>
+                                <div class="product-actions">
+                                    <input type="number" class="form-control quantity-input" value="1" min="1">
+                                    <button class="btn btn--primary btn--add-to-cart" data-id="產品ID">加入購物車</button>
+                                    <button class="btn btn--outline btn--buy-now" data-id="產品ID">立即購買</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 產品2 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/TOC-246.jpg" alt="高精度計重桌秤">
+                            </div>
+                            <div class="product-info">
+                                <h3>TOC-246 高精度計重桌秤</h3>
+                                <p class="product-description">高性能A/D轉換器</p>
+                                <div class="product-price-stock">
+                                    <span class="price">NT$ 1,500</span>
+                                    <!--<span class="stock">庫存: 8</span>-->
+                                </div>
+                                <div class="product-actions">
+                                    <input type="number" class="form-control quantity-input" value="1" min="1">
+                                    <button class="btn btn--primary btn--add-to-cart" data-id="產品ID">加入購物車</button>
+                                    <button class="btn btn--outline btn--buy-now" data-id="產品ID">立即購買</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 產品3 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/TOC-378.jpg" alt="多功能藍芽智能體重體脂計">
+                            </div>
+                            <div class="product-info">
+                                <h3>TOC-378<br>多功能藍芽智能體重體脂計</h3>
+                                <p class="product-description">新型ITO鍍膜工藝，解放踩點測脂自由</p>
+                                <div class="product-price-stock">
+                                    <span class="price">NT$ 2,500</span>
+                                    <!--<span class="stock">庫存: 32</span>-->
+                                </div>
+                                <div class="product-actions">
+                                    <input type="number" class="form-control quantity-input" value="1" min="1">
+                                    <button class="btn btn--primary btn--add-to-cart" data-id="產品ID">加入購物車</button>
+                                    <button class="btn btn--outline btn--buy-now" data-id="產品ID">立即購買</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 產品4 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/TOC-789.jpg" alt="智能藍芽體重計">
+                            </div>
+                            <div class="product-info">
+                                <h3>TOC-789 智能藍芽體重計</h3>
+                                <p class="product-description">藍芽自動傳輸,健康管理更方便</p>
+                                <div class="product-price-stock">
+                                    <span class="price">NT$ 3,200</span>
+                                    <!--<span class="stock">庫存: 20</span>-->
+                                </div>
+                                <div class="product-actions">
+                                    <input type="number" class="form-control quantity-input" value="1" min="1">
+                                    <button class="btn btn--primary btn--add-to-cart" data-id="產品ID">加入購物車</button>
+                                    <button class="btn btn--outline btn--buy-now" data-id="產品ID">立即購買</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shopping-cart-container">
+                    <h2>購物車</h2>
+                    <div class="cart-items">
+                        <div class="cart-header">
+                            <div class="cart-item-image">圖片</div>
+                            <div class="cart-item-details">商品</div>
+                            <div class="cart-item-price">單價</div>
+                            <div class="cart-item-quantity">數量</div>
+                            <div class="cart-item-subtotal">小計</div>
+                            <div class="cart-item-action">操作</div>
+                        </div>
+                        <!-- 購物車項目將透過JavaScript動態添加 -->
+                        <div class="cart-empty-message">
+                            <p>您的購物車目前是空的，請添加商品。</p>
+                        </div>
+                    </div>
+
+                    <div class="cart-summary">
+                        <div class="cart-total">
+                            <span>總計: </span>
+                            <span class="total-amount">NT$ 0</span>
+                        </div>
+                        <button class="btn btn--primary btn--checkout">前往結帳</button>
+                    </div>
+                </div>
+
+                <div class="checkout-form">
+                    <h2>結帳資訊</h2>
+                    <form id="checkoutForm">
+                        <div class="form-group">
+                            <label class="form-label">收件人姓名</label>
+                            <input type="text" class="form-control" name="recipientName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">聯絡電話</label>
+                            <input type="tel" class="form-control" name="contactPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">電子郵件</label>
+                            <input type="email" class="form-control" name="contactEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">收貨地址</label>
+                            <input type="text" class="form-control" name="shippingAddress" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">付款方式</label>
+                            <select class="form-control" name="paymentMethod" required>
+                                <option value="">請選擇付款方式</option>
+                                <option value="credit_card">信用卡付款</option>
+                                <option value="bank_transfer">銀行轉帳</option>
+                                <option value="line_pay">LINE Pay</option>
+                                <option value="apple_pay">Apple Pay</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">配送方式</label>
+                            <select class="form-control" name="shippingMethod" required>
+                                <option value="">請選擇配送方式</option>
+                                <option value="home_delivery">宅配到府</option>
+                                <option value="convenience_store">超商取貨</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">備註</label>
+                            <textarea class="form-control" name="orderNotes" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">確認訂單並付款</button>
+                    </form>
+                </div>
+            </div>
+
+    </main>
+
+<div id="footer"></div>
+
+<!-- Header/Footer 載入 -->
+  <script>
+    function loadHTML(id, url, callback) {
+      fetch(url).then(res => res.text()).then(html => {
+        document.getElementById(id).innerHTML = html;
+        if (typeof callback === 'function') callback();
+      });
+    }
+
+    // 載入 header 並執行 main 顯示控制邏輯
+    loadHTML("header", "header.html", initMainControl);
+    loadHTML("footer", "footer.html");
+
+    function initMainControl() {
+      const main = document.getElementById('mainContent');
+      const logo = document.getElementById('logoLink');
+      if (!main) return;
+
+      const isHidden = localStorage.getItem('mainHidden') === 'true';
+      main.style.display = isHidden ? 'none' : 'block';
+
+      if (logo) {
+        logo.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (main.style.display === 'none') {
+            main.style.display = 'block';
+            localStorage.setItem('mainHidden', 'false');
+          } else {
+            main.style.display = 'none';
+            localStorage.setItem('mainHidden', 'true');
+          }
+        });
+      }
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // 如果是購買頁面，顯示購物車項目
+      if (window.location.pathname.includes('purchase.html')) {
+          displayCartItems();
+      }
+    });
+
+    // 顯示購物車項目
+    function displayCartItems() {
+        const cartItemsContainer = document.querySelector('.cart-items');
+        if (!cartItemsContainer) return;
+
+        if (cart.length === 0) {
+            cartItemsContainer.innerHTML = `
+                <div class="cart-empty-message">
+                    <p>您的購物車目前是空的，請添加商品。</p>
+                </div>`;
+            return;
+        }
+
+        let html = `
+            <div class="cart-header">
+                <div class="cart-item-image">圖片</div>
+                <div class="cart-item-details">商品</div>
+                <div class="cart-item-price">單價</div>
+                <div class="cart-item-quantity">數量</div>
+                <div class="cart-item-subtotal">小計</div>
+                <div class="cart-item-action">操作</div>
+            </div>`;
+
+        // 這裡需要實作從產品資料庫獲取商品資訊
+        // 目前使用範例資料
+        cart.forEach(item => {
+            html += `
+                <div class="cart-item" data-id="${item.id}">
+                    <div class="cart-item-image">
+                        <img src="images/${item.id}.jpg" alt="">
+                    </div>
+                    <div class="cart-item-details">
+                        <h3>${item.id}</h3>
+                    </div>
+                    <div class="cart-item-price">NT$ 800</div>
+                    <div class="cart-item-quantity">
+                        <input type="number" value="${item.quantity}" min="1">
+                    </div>
+                    <div class="cart-item-subtotal">NT$ ${800 * item.quantity}</div>
+                    <div class="cart-item-action">
+                        <button class="btn btn--outline btn--sm" onclick="removeFromCart('${item.id}')">
+                            刪除
+                        </button>
+                    </div>
+                </div>`;
+        });
+
+        cartItemsContainer.innerHTML = html;
+        updateCartTotal();
+    }
+
+    // 更新購物車總金額
+    function updateCartTotal() {
+        const totalElement = document.querySelector('.total-amount');
+        if (!totalElement) return;
+
+        const total = cart.reduce((sum, item) => sum + (800 * item.quantity), 0);
+        totalElement.textContent = `NT$ ${total}`;
+    }
+
+    // 從購物車移除商品
+    function removeFromCart(productId) {
+        cart = cart.filter(item => item.id !== productId);
+        saveCart();
+        updateCartUI();
+        displayCartItems();
+    }
+  </script>
+<script src="cart.js"></script>
+
+<!-- 初始化 Google 翻譯元件的函式 -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'zh-TW',
+        includedLanguages: 'en,zh-TW,zh-CN,ja,ko',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+
+  <!-- 載入 Google 翻譯主程式 -->
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</body>
+</html>

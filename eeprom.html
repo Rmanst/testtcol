@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計量傳感器 - 專業測量解決方案</title>
+    <link rel="stylesheet" href="modified-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+
+    <!-- Main Content -->
+    <main>
+        <div class="product-categories-selection">
+            <div class="page-header">
+                <div class="container">
+                    <h1>EEPROM</h1>
+                    <p>為您的設備提供穩定可靠的數據儲存，確保資訊萬無一失</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="product-list">
+                    <div class="product-item featured" style="text-align: center;">
+                        <img src="images/testeeprom.png" alt="EEPROM">
+                    </div>
+                    <div class="product-item featured">
+                              <h2>產品說明</h2>
+                              
+                                <p>  提供(1) UMC 0.11um CMOS, (2) SIMC 0.18um CMOS 製程的EEPROM IC, </p>
+                                <p>  CMOS NVM 有 (1) Fuse, (2) OTP, (3) MTP, (4) EEPROM, (5) Flash, 5种形態, </p>
+                                <p>  而速玥公司提供的EEPROM IP有的特點為,</p>
+                                <p>  1.	和22nm ~ 180nm CMOS製程合而為一單芯片(SOC), 不需外掛NVM,</p>
+                                <p>  &emsp;&emsp; (1)	可為 元件及電路計量係數 的儲存點,</p> 
+                                <p>  &emsp;&emsp; (2)	可為 學習結果及程式 的儲存點,</p> 
+                                <p>  2.	燒錄(Program)及抹除(Erase)是微秒(um)級別, </p> 
+                                <p>  3.	可Byte, Word, Sector, Block同步燒錄(Program)及抹除(Erase)。</p> 
+                                <p></p>
+                                <p>  接受22nm ~ 180nm CMOS 製程的 EEPROM IP委製。     </p>                          
+                              
+                              <p>
+                              <h2>規格介紹</h2>
+                              <ul>
+                                <li>XX：XX</li>
+                                <li>XX：XX</li>
+                                <li>XX：XX</li>
+                                  </ul>
+                              <p>
+                                  <h2>應用領域</h2>
+                              <ul>
+                                <li>XXXX</li>
+                                <li>XXXX</li>
+                                <li>XXXX</li>
+                                
+                              </ul>
+                              <p>
+                                <div class="product-price-stock">
+                                    <span class="price">NT$ 請洽客服人員</span>
+                                    <!--<span class="stock">庫存: 20</span>-->
+                                </div>
+                              <p>
+                                <div class="product-actions">
+                                    <input type="number" class="form-control quantity-input" value="1" min="1">
+                                    <button class="btn btn--primary btn--add-to-cart">加入購物車</button>
+                                    <button class="btn btn--outline btn--buy-now">立即購買</button>
+                                </div>
+
+
+                    </div>
+                </div>
+
+
+    </div>
+</main>
+
+<div id="footer"></div>
+
+<!-- Header/Footer 載入 -->
+  <script>
+    function loadHTML(id, url, callback) {
+      fetch(url).then(res => res.text()).then(html => {
+        document.getElementById(id).innerHTML = html;
+        if (typeof callback === 'function') callback();
+      });
+    }
+
+    // 載入 header 並執行 main 顯示控制邏輯
+    loadHTML("header", "header.html", initMainControl);
+    loadHTML("footer", "footer.html");
+
+    function initMainControl() {
+      const main = document.getElementById('mainContent');
+      const logo = document.getElementById('logoLink');
+      if (!main) return;
+
+      const isHidden = localStorage.getItem('mainHidden') === 'true';
+      main.style.display = isHidden ? 'none' : 'block';
+
+      if (logo) {
+        logo.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (main.style.display === 'none') {
+            main.style.display = 'block';
+            localStorage.setItem('mainHidden', 'false');
+          } else {
+            main.style.display = 'none';
+            localStorage.setItem('mainHidden', 'true');
+          }
+        });
+      }
+    }
+  </script>
+
+<!-- 初始化 Google 翻譯元件的函式 -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'zh-TW',
+        includedLanguages: 'en,zh-TW,zh-CN,ja,ko',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+
+  <!-- 載入 Google 翻譯主程式 -->
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+<script src="cart.js"></script>
+</body>
+</html>
