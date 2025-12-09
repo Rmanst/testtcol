@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計量傳感器 - 專業測量解決方案</title>
+    <link rel="stylesheet" href="modified-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Homepage / About Section -->
+
+
+        <!-- Product Pages -->
+        
+            <div class="page-header">
+                <div class="container">
+                    <h1>生產性服務 </h1>
+                    <p>從精準計量 IC、模組到系統板與 App，速玥提供客製化的</p>
+                    <p>OEM / ODM 合作模式， 協助品牌快速進入智慧裝置與物聯網市場。</p>
+
+                    
+                </div>
+            </div>
+            <div class="applications-section">
+                    <h2>系統 / 模組</h2>
+                    <div class="application-grid">
+                      <a href="ourhelp1.html">
+                        <div class="application-card">
+                            <i class="fas fa-microchip"></i>
+                            <h3>芯片 / IC</h3>
+                            <p>速玥以精準計量 IC 為核心，提供電池包電芯級量測與</p>
+                            <p>空間中個體物理特性量測兩大產品線， 作為各式智慧裝置的量測基礎。</p>
+                        </div>
+                        </a>
+                        <div class="application-card">
+                          <a href="ourhelp2.html">
+                            <i class="fas fa-memory"></i>
+                            <h3>系統 / 模組</h3>
+                            <p>以速玥精準計量 IC 為核心，整合 MCU、通訊介面與感測器，</p>
+                            <p>模組與系統板，協助客戶快速完成產品開發與量產導入。</p>
+                        </div></a>
+                        <div class="application-card">
+                          <a href="ourhelp3.html">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>自有產品 / APP</h3>
+                            <p>透過手機 App 串接精準計量 IC 與感測裝置，提供即時監控、</p>
+                            <p>歷史紀錄、 告警通知與雲端同步功能，協助您快速驗證與展示應用價值。</p>
+                        </div></a>
+                    </div>
+                </div>
+                
+    </main>
+      
+<div id="footer"></div>
+
+<!-- Header/Footer 載入 -->
+  <script>
+    function loadHTML(id, url, callback) {
+      fetch(url).then(res => res.text()).then(html => {
+        document.getElementById(id).innerHTML = html;
+        if (typeof callback === 'function') callback();
+      });
+    }
+
+    // 載入 header 並執行 main 顯示控制邏輯
+    loadHTML("header", "header.html", initMainControl);
+    loadHTML("footer", "footer.html");
+
+    function initMainControl() {
+      const main = document.getElementById('mainContent');
+      const logo = document.getElementById('logoLink');
+      if (!main) return;
+
+      const isHidden = localStorage.getItem('mainHidden') === 'true';
+      main.style.display = isHidden ? 'none' : 'block';
+
+      if (logo) {
+        logo.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (main.style.display === 'none') {
+            main.style.display = 'block';
+            localStorage.setItem('mainHidden', 'false');
+          } else {
+            main.style.display = 'none';
+            localStorage.setItem('mainHidden', 'true');
+          }
+        });
+      }
+    }
+  </script>
+
+<!-- 初始化 Google 翻譯元件的函式 -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'zh-TW',
+        includedLanguages: 'en,zh-TW,zh-CN,ja,ko',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+
+  <!-- 載入 Google 翻譯主程式 -->
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</body>
+</html>

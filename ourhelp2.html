@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計量傳感器 - 專業測量解決方案</title>
+    <link rel="stylesheet" href="modified-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Homepage / About Section -->
+
+
+        <!-- Product Pages -->
+        
+            <div class="page-header">
+                <div class="container">
+                    <h1>系統 / 模組 </h1>
+                    <p>以速玥精準計量 IC 為核心，整合 MCU、通訊介面與感測器，</p>
+                    <p>模組與系統板，協助客戶快速完成產品開發與量產導入。</p>
+
+                    
+                </div>
+            </div>
+            <div class="applications-section">
+                    <h2>系統 / 模組</h2>
+                    <div class="application-grid">
+                        <div class="application-card">
+                            <i class="fas fa-microchip"></i>
+                            <h3>量測模組</h3>
+                            <p>將 IC、必要的類比前端與通訊介面封裝成模組，預先完成校正與參數設定，</p>
+                            <p>讓系統整合時只需透過標準介面讀取量測結果。</p>
+                        </div>
+                        <div class="application-card">
+                            <i class="fas fa-memory"></i>
+                            <h3>系統板 / 參考設計</h3>
+                            <p>針對特定應用（如電池包、空間感測設備），提供完整系統板與參考設計，</p>
+                            <p>包含供電、保護電路與通訊埠配置。</p>
+                        </div>
+                        <div class="application-card">
+                            <i class="fas fa-solar-panel"></i>
+                            <h3>通訊與雲端連接</h3>
+                            <p>支援常見通訊模組（如 Wi-Fi、BLE、蜂巢式），並可依專案需求預留與雲端平台整合的能力。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="applications-section">
+                    <h2>OEM / ODM 合作模式</h2>
+                    <div class="application-grid">
+                        <div class="application-card">
+                            <i class="fas fa-list"></i>
+                            <h3>需求訪談與規格定義</h3>
+                            <p>釐清應用情境、量測精度、通訊方式、預估出貨量與時程，並共同定義系統規格。</p>
+                        </div>
+                        <div class="application-card">
+                            <i class="fas fa-memory"></i>
+                            <h3>樣機開發與驗證</h3>
+                            <p>完成系統板設計與韌體開發，搭配量測與可靠度驗證，確保符合實際場域需求。</p>
+                        </div>
+                        <div class="application-card">
+                            <i class="fas fa-brain"></i>
+                            <h3>量產導入與後續支援</h3>
+                            <p>協助產線測試、治具設計與韌體更新維護，提供長期技術支援。</p>
+                        </div>
+                    </div>
+                </div>
+    </main>
+      
+<div id="footer"></div>
+
+<!-- Header/Footer 載入 -->
+  <script>
+    function loadHTML(id, url, callback) {
+      fetch(url).then(res => res.text()).then(html => {
+        document.getElementById(id).innerHTML = html;
+        if (typeof callback === 'function') callback();
+      });
+    }
+
+    // 載入 header 並執行 main 顯示控制邏輯
+    loadHTML("header", "header.html", initMainControl);
+    loadHTML("footer", "footer.html");
+
+    function initMainControl() {
+      const main = document.getElementById('mainContent');
+      const logo = document.getElementById('logoLink');
+      if (!main) return;
+
+      const isHidden = localStorage.getItem('mainHidden') === 'true';
+      main.style.display = isHidden ? 'none' : 'block';
+
+      if (logo) {
+        logo.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (main.style.display === 'none') {
+            main.style.display = 'block';
+            localStorage.setItem('mainHidden', 'false');
+          } else {
+            main.style.display = 'none';
+            localStorage.setItem('mainHidden', 'true');
+          }
+        });
+      }
+    }
+  </script>
+
+<!-- 初始化 Google 翻譯元件的函式 -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'zh-TW',
+        includedLanguages: 'en,zh-TW,zh-CN,ja,ko',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+
+  <!-- 載入 Google 翻譯主程式 -->
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</body>
+</html>
