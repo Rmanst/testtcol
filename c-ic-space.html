@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>空間中個體物理特性量測 IC｜Transducer on Chip</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="modified-style.css">
+  <link rel="stylesheet" href="modified-style-c.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+<main>
+  <div class="page-header">
+    <div class="container">
+      <h1>空間中個體物理特性量測 IC</h1>
+      <p>
+        以汽車電子與 IoT 系統為例，說明本 IC 如何從「傳感與量測」、「控制與電池管理」、
+        「IoT 聯網」到「APP 應用」四個層級，將空間中個體的物理特性轉換為可分析、可管理的數據。
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- 上半：圖文橫排 -->
+    <div class="product-list">
+      <div class="product-item featured" style="text-align:center;">
+        <img src="images/ic-space.png" alt="空間中個體物理特性量測 IC 示意圖">
+      </div>
+      <div class="product-item featured">
+        <h2>產品定位</h2>
+        <p>
+          本 IC 針對空間中個體的物理特性量測設計，適用於位置、運動、溫度與其他環境參數的感測。
+          可結合 IoT MCU、電池管理 IC 與通訊模組，形成從感測到雲端的完整應用路徑。
+        </p>
+        <h2>典型應用場景</h2>
+        <ul>
+          <li>車用電子與車內環境監控</li>
+          <li>智慧建築與樓宇管理（照明、空調、環境感測）</li>
+          <li>物聯網感測節點與安全監控裝置</li>
+          <li>穿戴式或個人設備之動態與環境量測</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 一、四層架構 -->
+    <section style="margin-top:32px;">
+      <h2 class="tech-section-title">一、空間中個體物理特性的四層架構</h2>
+      <p class="tech-section-sub">
+        以技術層級來看，可分為：感測層、控制與電池管理層、IoT 聯網層與應用層。
+        本 IC 位於「感測層」，但設計時即考量後續三層的整體系統需求。
+      </p>
+
+      <div class="tech-grid">
+        <div class="section-card">
+          <h3>感測層</h3>
+          <p>
+            Transducer + Gauge ADC，負責將電壓、電流、溫度、壓力或位置等物理量轉換為精準的數位量測數據。
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>控制與電池管理層</h3>
+          <p>
+            由 IoT MCU 搭配電池管理 IC（如 SAmPG）組成，負責運算、邏輯控制與電池安全保護。
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>IoT 聯網層</h3>
+          <p>
+            透過 BLE、Wi-Fi 或其他通訊方式連接到 Gateway，再以 MQTT / HTTP 等協定上傳雲端。
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>應用層</h3>
+          <p>
+            以 APP 或 Web Dashboard 呈現量測數據與狀態，提供操作、設定與價值分析等功能。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 二、Transducer + Gauge ADC -->
+    <section style="margin-top:32px;">
+      <h2 class="tech-section-title">二、Transducer + Gauge ADC｜芯片層</h2>
+      <p class="tech-section-sub">
+        在空間中個體的實際量測上，傳感元件與 Gauge ADC 扮演系統的第一道入口，
+        負責將實體世界的變化準確帶入系統內部。
+      </p>
+
+      <div class="tech-block">
+        <h3>1. 物理量量測</h3>
+        <p>
+          透過 Transducer 量測電、熱、力、位移等物理特性，將實體世界的狀態以電壓或電流形式表達，
+          作為後續 A/D 轉換的輸入。
+        </p>
+      </div>
+      <div class="tech-block">
+        <h3>2. 類比轉數位</h3>
+        <p>
+          Gauge ADC 執行高解析度類比 / 數位轉換，並搭配類比前端（AFE）進行放大、濾波與雜訊抑制，
+          以確保量測精度與穩定度。
+        </p>
+      </div>
+      <div class="tech-block">
+        <h3>3. 標準化量測介面</h3>
+        <p>
+          透過數位介面（例如 I²C、SPI 等）輸出量測結果，讓 MCU 與後端系統可以一致地解讀與處理數據。
+        </p>
+      </div>
+
+      <p class="tech-note">
+        在汽車與 IoT 系統中，此層可對應到多種感測器與其後端量測 IC，形成多點量測網路。
+      </p>
+    </section>
+
+    <!-- 三、IoT MCU + SAmPG -->
+    <section style="margin-top:32px;">
+      <h2 class="tech-section-title">三、IoT MCU + 電池管理（SAmPG）｜芯片＋系統層</h2>
+      <p class="tech-section-sub">
+        當感測數據由本 IC 提供後，IoT MCU 與電池管理 IC 負責進一步運算、控制與安全管理，
+        形成完整的「芯片＋系統」層。
+      </p>
+
+      <div class="sections-inner">
+        <div class="section-card">
+          <h3>IoT MCU 控制與運算</h3>
+          <p>
+            負責整體裝置的邏輯、演算法與通訊協定處理，包含多感測點的資料整合與狀態判斷。
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>電池管理（SAmPG）</h3>
+          <p>
+            若應用包含電池，則由 SAmPG 負責電壓、電流與溫度量測，並提供過壓、過流、
+            過溫等保護機制。
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>系統級資訊整合</h3>
+          <p>
+            將空間中個體的物理特性與電池狀態整合為統一資料，供上層 IoT 與 APP 使用，
+            提升整體系統的安全與效率。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 四、IoT + Gateway + MQTT -->
+    <section style="margin-top:32px;">
+      <h2 class="tech-section-title">四、IoT 聯網與通信閘道</h2>
+      <p class="tech-section-sub">
+        經過 MCU 與電池管理處理後的資料，可以透過近端無線通訊與通信閘道上傳至雲端，
+        形成空間中個體物理特性的遠端監控能力。
+      </p>
+
+      <div class="sections-inner">
+        <div class="section-card">
+          <h3>近端無線通訊</h3>
+          <p>
+            使用 BLE / Wi-Fi 等技術，將裝置端的量測與狀態資料傳輸至 Gateway 或邊緣節點。
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>通信閘道與 MQTT</h3>
+          <p>
+            閘道裝置彙整多個感測節點資料，透過 MQTT / HTTP 等協定與雲端 IoT 平台連線，
+            支援多裝置與多場域佈署。
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>雲端平台整合</h3>
+          <p>
+            提供設備影子、告警推送、歷史資料儲存等功能，為 APP 與後端服務提供穩定的資料來源。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 五、APP 應用層 -->
+    <section style="margin-top:32px;margin-bottom:40px;">
+      <h2 class="tech-section-title">五、特定目的應用軟體（APP）</h2>
+      <p class="tech-section-sub">
+        最終，空間中個體的物理特性會以 APP 或 Web 服務的形式呈現，讓使用者能以直觀方式掌握狀態、
+        進行設定與決策。
+      </p>
+
+      <div class="sections-inner">
+        <div class="section-card">
+          <h3>數據可視化</h3>
+          <p>以圖表或儀表板呈現位置、溫度或其他物理量，便於趨勢觀察與異常偵測。</p>
+        </div>
+        <div class="section-card">
+          <h3>設備設定與控制</h3>
+          <p>提供閾值設定、模式切換與韌體更新等操作，實現遠端管理。</p>
+        </div>
+        <div class="section-card">
+          <h3>報表與價值評估</h3>
+          <p>生成效能、安全與壽命相關報表，評估系統或設備的整體價值。</p>
+        </div>
+        <div class="section-card">
+          <h3>跨產品線整合</h3>
+          <p>可在同一平台上整合多種感測與電池管理產品，形成完整的服務平台（SP）。</p>
+        </div>
+      </div>
+
+      <p class="tech-note">
+        本頁內容自網站 B 的「空間中個體物理特性量測 IC」整理而來，並以網站 A 風格呈現，
+        便於後續加入實際型號與規格表。
+      </p>
+    </section>
+  </div>
+</main>
+
+<div id="footer"></div>
+
+<script>
+  function loadHTML(id, url, callback) {
+    fetch(url).then(res => res.text()).then(html => {
+      document.getElementById(id).innerHTML = html;
+      if (typeof callback === 'function') callback();
+    });
+  }
+
+  loadHTML("header", "header.html", initMainControl);
+  loadHTML("footer", "footer.html");
+
+  function initMainControl() {
+    const main = document.getElementById('mainContent');
+    const logo = document.getElementById('logoLink');
+    if (!main) return;
+
+    const isHidden = localStorage.getItem('mainHidden') === 'true';
+    main.style.display = isHidden ? 'none' : 'block';
+
+    if (logo) {
+      logo.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (main.style.display === 'none') {
+          main.style.display = 'block';
+          localStorage.setItem('mainHidden', 'false');
+        } else {
+          main.style.display = 'none';
+          localStorage.setItem('mainHidden', 'true');
+        }
+      });
+    }
+  }
+</script>
+
+</body>
+</html>

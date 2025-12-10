@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>APP 與開發者資源｜Transducer on Chip</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="modified-style.css">
+  <link rel="stylesheet" href="modified-style-c.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+<main>
+  <div class="page-header">
+    <div class="container">
+      <h1>APP 與開發者資源</h1>
+      <p>
+        透過手機 App 串接精準計量 IC 與感測裝置，提供即時監控與歷史紀錄，
+        並搭配技術文件與 SDK / API，協助工程師快速完成整合與開發。
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- 一、APP 功能 -->
+    <section style="margin-top:24px;margin-bottom:32px;">
+      <h2 class="tech-section-title">一、APP 功能概述</h2>
+      <p class="tech-section-sub">
+        App 是用戶與裝置之間的主要互動介面，除了即時量測與紀錄，也可作為 Demo 與展示工具。
+      </p>
+
+      <div class="sections-inner">
+        <div class="section-card">
+          <h3>裝置管理</h3>
+          <p>
+            支援藍牙 / Wi-Fi 連線裝置的新增、綁定與權限管理，適合多裝置情境或分層管理需求。
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>即時量測與歷史紀錄</h3>
+          <p>
+            以圖表與數字同步呈現量測數據，並支援匯出 CSV 供進一步分析或報表使用。
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>告警與通知</h3>
+          <p>
+            可設定門檻值，當量測數據異常時推送通知，協助使用者即時掌握設備狀態。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 二、示範情境 -->
+    <section style="margin-bottom:32px;">
+      <h2 class="tech-section-title">二、示範情境</h2>
+      <p class="tech-section-sub">
+        以下示例展示如何結合 IC、模組與 App，快速驗證與展示不同領域的應用價值。
+      </p>
+
+      <div class="sections-inner">
+        <div class="section-card">
+          <h3>電池包健康監測</h3>
+          <p>
+            搭配電池包電芯級精準量測 IC，在 App 中查看 SOC / SOH、循環壽命與溫度分佈，
+            適用於電動車與儲能系統。
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>空間感測儀表</h3>
+          <p>
+            使用空間中個體物理特性量測 IC，顯示環境狀態、移動軌跡或安全監控資訊，
+            適用於智慧建築與 IoT 節點。
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>客製品牌 Demo App</h3>
+          <p>
+            提供 OEM / ODM 合作客戶專屬 Demo App 外觀與品牌元素，方便對外展示產品功能與價值。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 三、開發者中心：資源分類 -->
+    <section style="margin-bottom:32px;">
+      <h2 class="tech-section-title">三、開發者中心：文件與工具</h2>
+      <p class="tech-section-sub">
+        為協助工程師與開發者整合速玥的 IC、模組與系統方案，將逐步建立完整的開發者資源中心。
+      </p>
+
+      <div class="sections-inner">
+        <div class="section-card">
+          <h3>技術文件與 Datasheet</h3>
+          <p>
+            未來可集中放置各 IC、模組的 Datasheet、Reference Design 與 Application Note，
+            作為硬體與系統設計的基礎。
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>SDK / API / 工具</h3>
+          <p>
+            包含韌體範例、PC / 手機端工具與 API 說明，協助整合到既有系統或雲端平台。
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>TOCL 與開發工具鏈</h3>
+          <p>
+            若未來有校正程式、測試流程或開發工具，可在此區整理並提供下載或使用說明。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 四、暫時占位說明 -->
+    <section style="margin-bottom:40px;">
+      <div class="tech-block">
+        <h3>暫時占位說明</h3>
+        <p>
+          目前此頁為框架示意，待未來有實際文件、下載連結或 GitHub 專案時，可直接補充連結與內容。
+          若有特定開發板或 Demo Kit，也可於此集中說明。
+        </p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<div id="footer"></div>
+
+<script>
+  function loadHTML(id, url, callback) {
+    fetch(url).then(res => res.text()).then(html => {
+      document.getElementById(id).innerHTML = html;
+      if (typeof callback === 'function') callback();
+    });
+  }
+
+  loadHTML("header", "header.html", initMainControl);
+  loadHTML("footer", "footer.html");
+
+  function initMainControl() {
+    const main = document.getElementById('mainContent');
+    const logo = document.getElementById('logoLink');
+    if (!main) return;
+
+    const isHidden = localStorage.getItem('mainHidden') === 'true';
+    main.style.display = isHidden ? 'none' : 'block';
+
+    if (logo) {
+      logo.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (main.style.display === 'none') {
+          main.style.display = 'block';
+          localStorage.setItem('mainHidden', 'false');
+        } else {
+          main.style.display = 'none';
+          localStorage.setItem('mainHidden', 'true');
+        }
+      });
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -11,14 +11,14 @@
 <body>
 <div id="header"></div>
 
-    <!-- Main Content -->
-    <main>
-
-            <!-- About Us Brief -->
-            <div class="about-brief">
+    <!-- 產品線總覽 -->
+  <section class="products-overview">
+    <div class="container">
+      <h2>從精準計量 IC 到完整智慧裝置</h2>
+      <div class="about-brief">
                 <div class="container">
                     <div class="about-content">
-                      <h2>關於我們</h2>                      
+                      <h2></h2>                      
                         <p>APP的普及，帶來生活品質不斷提升。</p>
                         <p>讓物理能量透過傳感器及芯片，能得到「精準」計量，</p>
                         <p>讓APP能處理及顯示我們(人及設備)周邊的物理能量。</p>
@@ -30,6 +30,116 @@
                     </div>
                 </div>
             </div>
+      <p style="text-align:center; max-width:720px; margin:0 auto 24px; color:#555; font-size:14px;">
+        我們提供三大產品線：<br>
+        「芯片 / IC」、「系統 / 模組」、以及「自有產品（計量表、手攜裝置、傳感器與配件）」，
+        協助您快速打造具備量測與通訊能力的智慧裝置。
+      </p>
+
+      <div class="product-grid">
+        <!-- 芯片 / IC -->
+        <div class="product-item">
+          <i class="fas fa-microchip"></i>
+          <div class="product-info">
+            <h3>芯片 / IC</h3>
+            <p>
+              包含電池包電芯級精準量測 IC、
+              以及空間中個體物理特性量測 IC，
+              是智慧裝置量測的核心元件。
+            </p>
+            <div class="product-specs">
+              <span class="spec">電池包電芯級監測</span>
+              <span class="spec">空間感測 IC</span>
+              <span class="spec">高解析 ADC</span>
+            </div>
+            <p style="margin-top:10px;">
+              <a href="c-ic-batterycell.html" class="btn btn--outline btn--sm">
+                查看 IC 技術頁 →
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- 系統 / 模組 -->
+        <div class="product-item">
+          <i class="fas fa-project-diagram"></i>
+          <div class="product-info">
+            <h3>系統 / 模組</h3>
+            <p>
+              以精準計量 IC 為核心，整合 MCU、通訊介面與感測器，
+              形成模組與系統板，適合 OEM / ODM 導入。
+            </p>
+            <div class="product-specs">
+              <span class="spec">參考設計</span>
+              <span class="spec">系統板</span>
+              <span class="spec">通訊模組</span>
+            </div>
+            <p style="margin-top:10px;">
+              <a href="c-systems-oem.html" class="btn btn--outline btn--sm">
+                查看系統 / 模組方案 →
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- 自有產品 -->
+        <div class="product-item">
+          <i class="fas fa-balance-scale"></i>
+          <div class="product-info">
+            <h3>自有產品與配件</h3>
+            <p>
+              以計量為核心的自有產品：計量表、手攜產品，
+              搭配傳感器、記憶體、動力電池等週邊，方便展示與實際應用。
+            </p>
+            <div class="product-specs">
+              <span class="spec">計量表 / Meters</span>
+              <span class="spec">傳感器 / Sensors</span>
+              <span class="spec">記憶體 / 動力電池</span>
+            </div>
+            <p style="margin-top:10px;">
+              <a href="c-ic-space.html" class="btn btn--outline btn--sm">
+                查看自有產品 →
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 應用 / 解決方案 -->
+  <section class="sections">
+    <div class="container sections-inner">
+      <div class="section-card" onclick="location.href='c-applications.html'">
+        <h3>應用場域</h3>
+        <p>
+          從電池包健康監測、空間感測，到醫療健康與工業量測，
+          讓精準計量 IC 與系統方案對應到實際場景。
+        </p>
+        <a href="c-applications.html">查看應用範例 →</a>
+      </div>
+
+      <div class="section-card" onclick="location.href='c-systems-oem.html'">
+        <h3>解決方案與合作模式</h3>
+        <p>
+          提供 IC 採購、模組供應、系統板設計與端到端整合，
+          以 OEM / ODM 形式協助您從 PoC 走到量產。
+        </p>
+        <a href="c-systems-oem.html">了解解決方案 →</a>
+      </div>
+
+      <div class="section-card" onclick="location.href='c-app-dev.html'">
+        <h3>示範 App 與開發者支援</h3>
+        <p>
+          透過示範 App、開發工具與技術文件，
+          讓您能快速驗證量測能力並整合到既有系統。
+        </p>
+        <a href="c-app-dev.html">前往 APP / 開發者資源 →</a>
+      </div>
+    </div>
+  </section>
+</main>
+            
 
     </main>
 

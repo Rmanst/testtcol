@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>電池包電芯級精準量測 IC｜Transducer on Chip</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="modified-style.css">
+  <link rel="stylesheet" href="modified-style-c.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+<main>
+  <div class="page-header">
+    <div class="container">
+      <h1>電池包電芯級精準量測 IC</h1>
+      <p>
+        針對電池包內每顆電芯進行電壓、溫度、內阻與電流量測，用於高安全與高效率的
+        電動車與儲能系統，對應網站 B 中的電池芯級量測解決方案。
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- 上半：圖文橫排（比照 A 的產品頁） -->
+    <div class="product-list">
+      <div class="product-item featured" style="text-align:center;">
+        <div class="sections-inner">
+        <div class="section-card">
+          <h3>1. 電池包（Pack）</h3>
+          <p>由多個小電池包串聯構成，提供整體系統主電能。</p>
+        </div>
+
+        <div class="section-card">
+          <h3>2. 小電池包（Module）</h3>
+          <p>由多個電池組並聯構成，是系統內部的中階單元。</p>
+        </div>
+
+        <div class="section-card">
+          <h3>3. 電池組（Group）</h3>
+          <p>由多顆電池芯串聯構成，決定模組電壓等級。</p>
+        </div>
+
+        <div class="section-card">
+          <h3>4. 電池芯（Cell）</h3>
+          <p>最基本的儲能單位，例如 18650 單顆電芯。</p>
+        </div>
+      </div>
+
+        <!--<img src="images/ic-batterycell.png" alt="電池包電芯級精準量測 IC 示意圖">-->
+      </div>
+      <div class="product-item featured">
+        <h2>產品定位</h2>
+        <p>
+          本 IC 針對電池包架構中的「電池芯級監控」需求設計，能在 Pack / Module / Group / Cell
+          多層級架構下，提供每顆電芯的關鍵量測數據，支援高安全、高壽命的電動車與儲能應用。
+        </p>
+        <h2>應用領域</h2>
+        <ul>
+          <li>電動車電池系統（EV / HEV / PHEV）</li>
+          <li>儲能系統（ESS、UPS）</li>
+          <li>高功率電池模組與電池測試設備</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 區塊一：汽車能源系統三大領域（從 B 抽象後，改用文字 + tech-block 呈現） -->
+    <section style="margin-top:32px;">
+      <h2 class="tech-section-title">一、汽車能源系統三大領域</h2>
+      <p class="tech-section-sub">
+        以電動車為例，整體可分為電機系統、電控系統與電池系統三大部分，各自負責動力輸出、
+        控制與能量來源，而本電池芯級量測 IC 即是電池系統中的關鍵元件。
+      </p>
+
+      <div class="tech-grid">
+        <div class="section-card">
+          <h3>1. 電機系統（Motor System）</h3>
+          <p>
+            負責能量轉換與輸出效率，屬於「重電」領域，包含馬達與功率電子。
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>2. 電控系統（ECU / Control）</h3>
+          <p>
+            負責訊號處理、控制策略與人機介面，屬於「輕電」範疇。
+          </p>
+        </div>
+        <div class="section-card">
+          <h3>3. 電池系統（Battery System）</h3>
+          <p>
+            提供整車能量來源，需同時考量能量密度、安全性與壽命管理，
+            本 IC 即應用於此處的電池芯級量測。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 區塊二：電池包能源架構（Pack / Module / Group / Cell） -->
+    <section style="margin-top:32px;">
+      <h2 class="tech-section-title">二、電池包能源架構：Pack → Module → Group → Cell</h2>
+      <p class="tech-section-sub">
+        以層級觀點來看，電池系統可由大到小分為 Pack、Module、小電池組（Group）與單顆電池芯（Cell），
+        本 IC 聚焦在「Cell 級」的精準量測。
+      </p>
+
+      <div class="tech-block">
+        <h3>1. 電池包（Pack）</h3>
+        <p>
+          由多個小電池包（Module）串聯構成，提供整體系統主電能，例如 78 kW 等級的動力電池組。
+        </p>
+      </div>
+      <div class="tech-block">
+        <h3>2. 小電池包（Module）</h3>
+        <p>
+          由多個電池組（Group）並聯構成，是系統內部的中階單元，影響維修與模組化設計方式。
+        </p>
+      </div>
+      <div class="tech-block">
+        <h3>3. 電池組（Group）</h3>
+        <p>
+          由多顆電池芯串聯構成，決定單一模組的電壓等級，異常時常以「組」為單位辨識。
+        </p>
+      </div>
+      <div class="tech-block">
+        <h3>4. 電池芯（Cell）</h3>
+        <p>
+          最基本的儲能單位，如 18650 / 21700 等標準電芯。  
+          <br>本 IC 可對每顆 Cell 進行獨立量測，是安全與壽命管理的關鍵。
+        </p>
+      </div>
+    </section>
+
+    <!-- 區塊三：BMS 監控層級與本 IC 的定位 -->
+    <section style="margin-top:32px;">
+      <h2 class="tech-section-title">三、電池管理系統（BMS）監控層級與本 IC 的定位</h2>
+      <div class="tech-grid">
+        <div class="section-card">
+          <h3>電池包監控</h3>
+          <p>監控整體電壓、溫度與功率，用於系統級的保護與能源管理。</p>
+        </div>
+        <div class="section-card">
+          <h3>小電池包監控</h3>
+          <p>模組級監控，用於掌握各模組之間的差異與平衡狀態。</p>
+        </div>
+        <div class="section-card">
+          <h3>電池組監控</h3>
+          <p>針對串聯的電池組進行監控，有助於異常組別的偵測。</p>
+        </div>
+        <div class="section-card">
+          <h3>電池芯監控（本 IC）</h3>
+          <p>
+            直接看到每顆電芯的電壓、溫度、內阻與電流，是安全、壽命與價值判斷的核心資訊。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 區塊四：量測項目與可評估/可管理項目 -->
+    <section style="margin-top:32px;margin-bottom:40px;">
+      <h2 class="tech-section-title">四、電池芯級精準量測與評估項目</h2>
+
+      <div class="sections-inner">
+        <div class="section-card">
+          <h3>量測項目</h3>
+          <ul>
+            <li>電池芯電壓 Vbat</li>
+            <li>電池芯溫度 Tbat</li>
+            <li>電池芯內阻 Rbat</li>
+            <li>電池芯電流 Ibat</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <h3>可評估特性</h3>
+          <ul>
+            <li>壽命（Cycle Life）</li>
+            <li>健康度（State of Health）</li>
+            <li>容量與續航力（Range）</li>
+            <li>安全性（Safety）</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <h3>可管理策略</h3>
+          <ul>
+            <li>平衡（Balancing）</li>
+            <li>隔離（Isolation）</li>
+            <li>更換（Replacement）</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <h3>可評價屬性</h3>
+          <ul>
+            <li>品質（Quality）</li>
+            <li>價值 / 殘值（Value）</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="tech-note">
+        本頁內容來自網站 B 的「電池包電芯級精準量測 IC」技術說明，  
+        經整理後以網站 A 的版型呈現，方便後續擴充實際型號與規格表。
+      </p>
+    </section>
+  </div>
+</main>
+
+<div id="footer"></div>
+
+<script>
+  function loadHTML(id, url, callback) {
+    fetch(url).then(res => res.text()).then(html => {
+      document.getElementById(id).innerHTML = html;
+      if (typeof callback === 'function') callback();
+    });
+  }
+
+  loadHTML("header", "header.html", initMainControl);
+  loadHTML("footer", "footer.html");
+
+  function initMainControl() {
+    const main = document.getElementById('mainContent');
+    const logo = document.getElementById('logoLink');
+    if (!main) return;
+
+    const isHidden = localStorage.getItem('mainHidden') === 'true';
+    main.style.display = isHidden ? 'none' : 'block';
+
+    if (logo) {
+      logo.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (main.style.display === 'none') {
+          main.style.display = 'block';
+          localStorage.setItem('mainHidden', 'false');
+        } else {
+          main.style.display = 'none';
+          localStorage.setItem('mainHidden', 'true');
+        }
+      });
+    }
+  }
+</script>
+
+</body>
+</html>
